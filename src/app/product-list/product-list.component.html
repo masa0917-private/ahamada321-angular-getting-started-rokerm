@@ -1,5 +1,14 @@
-<h2>Products</h2>
+<h2>Products (商品一覧)</h2>
 
+<div *ngFor="let product of products">
+  <a [title]="product.name + ' の詳細はこちら'">
+    <h3>{{ product.name }}</h3>
+  </a>
+
+  <p>{{ product.price }}円</p>
+
+  <p *ngIf="product.description">詳細: {{ product.description }}</p>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
